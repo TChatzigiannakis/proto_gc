@@ -10,6 +10,7 @@
 #include "gc/scan.h"
 #include "gc/internal.h"
 #include "gc/cleanup.h"
+#include "gc/compact.h"
 
 #include "gc/malloc.h"
 #include "gc/calloc.h"

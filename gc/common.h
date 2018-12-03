@@ -35,6 +35,7 @@ void GC_set_heap_boundaries(void);
 GC_ALLOC_INFO *GC_resolve_internal(uintptr_t);
 void GC_scan(uintptr_t, uintptr_t);
 void GC_cleanup(void);
+void GC_compact(void);
 
 void *GC_malloc(size_t);
 void *GC_calloc(size_t, size_t);
