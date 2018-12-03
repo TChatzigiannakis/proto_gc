@@ -13,6 +13,7 @@ void GC_cleanup(void)
         {
             free((void *)info->address);
             info->address = 0;
+            info->size = 0;
             freed++;
         }
     }
