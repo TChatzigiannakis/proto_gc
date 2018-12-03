@@ -11,7 +11,10 @@ void GC_scan(uintptr_t min, uintptr_t max)
             if (!info->alive)
             {
                 info->alive = 1;
-                GC_scan(info->address, info->address + info->size);
+                if (info->address)
+                {
+                    GC_scan(info->address, info->address + info->size);
+                }
             }
             else
             {
