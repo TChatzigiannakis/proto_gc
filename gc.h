@@ -1,6 +1,7 @@
 #include "gc/init.h"
 #include "gc/full.h"
 #include "gc/resize.h"
+#include "gc/collect.h"
 #include "gc/malloc.h"
 #include "gc/calloc.h"
 #include "gc/free.h"
