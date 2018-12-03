@@ -6,6 +6,7 @@
 
 #include "gc/collect.h"
 #include "gc/stack.h"
+#include "gc/heap.h"
 
 #include "gc/malloc.h"
 #include "gc/calloc.h"
