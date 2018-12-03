@@ -7,7 +7,7 @@
 
 int main(int argc, char **argv)
 {
-    GC_init();
+    GC_init(&argv);
 
     int *p[COUNT] = {NULL};
     for (int i = 0; i < COUNT; i++)
