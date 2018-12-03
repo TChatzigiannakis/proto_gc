@@ -3,16 +3,25 @@
 
 #include "gc.h"
 
+#define COUNT 1024
+
 int main(int argc, char **argv)
 {
     GC_init();
-    printf("Starting...\n");
-    for (unsigned short i = -1; i > 0; i--)
+
+    int *p[COUNT] = {NULL};
+    for (int i = 0; i < COUNT; i++)
     {
-        int *p = malloc(sizeof(int));
-        *p = i;
-        printf(*p == 1 ? ".\n" : "");
+        p[i] = malloc(sizeof(int));
+        *p[i] = i;
     }
-    printf("Finished.\n");
+
+    int sum = 0;
+    for (int i = 0; i < COUNT; i++)
+    {
+        sum += *p[i];
+    }
+    printf("End: %d\n", sum);
+
     return 0;
 }
