@@ -32,6 +32,7 @@ void GC_expand(void);
 GC_ALLOC_INFO *GC_next(void);
 void GC_set_stack_boundaries(void);
 void GC_set_heap_boundaries(void);
+GC_ALLOC_INFO *GC_resolve_internal(uintptr_t);
 
 void *GC_malloc(size_t);
 void *GC_calloc(size_t, size_t);
