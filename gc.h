@@ -9,6 +9,7 @@
 #include "gc/heap.h"
 #include "gc/scan.h"
 #include "gc/internal.h"
+#include "gc/cleanup.h"
 
 #include "gc/malloc.h"
 #include "gc/calloc.h"

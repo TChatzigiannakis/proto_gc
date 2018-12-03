@@ -4,6 +4,9 @@
 
 void GC_collect(void)
 {
+    printf("Beginning GC.\n");
+    system("pause");
+
     jmp_buf buf;
     setjmp(buf);
 
@@ -11,4 +14,11 @@ void GC_collect(void)
     GC_set_heap_boundaries();
 
     GC_scan(MIN(GC_stack_begin, GC_stack_end), MAX(GC_stack_begin, GC_stack_end));
+
+    GC_cleanup();
+
+    for (size_t i = 0; i < GC_capacity; i++)
+    {
+        GC_allocations[i].alive = 0;
+    }
 }
