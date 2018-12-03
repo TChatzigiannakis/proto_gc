@@ -1,5 +1,5 @@
 #include "common.h"
 
-void resize(size_t count)
+void GC_resize(size_t count)
 {
 }
