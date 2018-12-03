@@ -17,6 +17,4 @@ void GC_cleanup(void)
             freed++;
         }
     }
-
-    printf("%d objects freed.\n", freed);
 }
