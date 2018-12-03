@@ -5,6 +5,7 @@
 
 #define MIN(x, y) (x < y ? x : y)
 #define MAX(x, y) (x > y ? x : y)
+#define IN_RANGE(x, min, max) (min <= x && x <= max)
 
 typedef struct GC_ALLOC_INFO_STRUCT
 {
