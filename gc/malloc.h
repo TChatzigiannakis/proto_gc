@@ -2,5 +2,20 @@
 
 void *GC_malloc(size_t size)
 {
-    return NULL;
+    if (GC_full())
+    {
+        GC_collect();
+        if (GC_full())
+        {
+            GC_expand();
+        }
+    }
+
+    void *ptr = malloc(size);
+    GC_ALLOC_INFO *info = GC_next();
+    info->address = (uintptr_t)ptr;
+    info->size = size;
+    info->alive = 0;
+
+    return ptr;
 }
