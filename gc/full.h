@@ -2,5 +2,5 @@
 
 int GC_full(void)
 {
-    return GC_capacity == GC_next;
+    return GC_capacity == GC_object_count;
 }

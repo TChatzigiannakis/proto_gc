@@ -11,7 +11,7 @@ typedef struct GC_ALLOC_INFO_STRUCT
 } GC_ALLOC_INFO;
 
 size_t GC_capacity = 0;
-size_t GC_next = 0;
+size_t GC_object_count = 0;
 GC_ALLOC_INFO *GC_allocations = NULL;
 
 uintptr_t GC_stack_begin = 0;
