@@ -4,9 +4,6 @@
 
 void GC_collect(void)
 {
-    printf("Beginning GC.\n");
-    system("pause");
-
     jmp_buf buf;
     setjmp(buf);
 
