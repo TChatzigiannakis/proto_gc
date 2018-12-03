@@ -20,4 +20,6 @@ uintptr_t GC_stack_end = 0;
 uintptr_t GC_heap_begin = 0;
 uintptr_t GC_heap_end = 0;
 
+void GC_init(void);
+
 #endif
