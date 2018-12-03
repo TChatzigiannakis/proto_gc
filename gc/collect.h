@@ -8,4 +8,5 @@ void GC_collect(void)
     int r = setjmp(buf);
 
     GC_set_stack_boundaries();
+    GC_set_heap_boundaries();
 }
