@@ -1,8 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+#include "gc.h"
+
 int main(int argc, char **argv)
 {
+    GC_init();
     printf("Starting...\n");
     for (unsigned short i = -1; i > 0; i--)
     {
