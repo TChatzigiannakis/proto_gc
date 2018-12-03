@@ -14,6 +14,8 @@ void GC_collect(void)
 
     GC_cleanup();
 
+    GC_compact();
+
     for (size_t i = 0; i < GC_capacity; i++)
     {
         GC_allocations[i].alive = 0;
