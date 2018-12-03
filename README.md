@@ -1,4 +1,4 @@
-# Proto
+# Proto GC
 
 The simplest possible single-threaded, stop-the-world, non-generational, non-compacting, conservative tracing garbage collector.
 
