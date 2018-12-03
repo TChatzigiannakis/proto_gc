@@ -12,6 +12,7 @@ void GC_cleanup(void)
         if (!info->alive)
         {
             free((void *)info->address);
+            info->address = 0;
             freed++;
         }
     }
