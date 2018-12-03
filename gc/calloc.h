@@ -12,6 +12,11 @@ void *GC_calloc(size_t count, size_t size)
     }
 
     void *ptr = calloc(count, size);
+    if (!ptr)
+    {
+        GC_collect();
+        ptr = calloc(count, size);
+    }
 
     GC_ALLOC_INFO *info = GC_next();
     info->address = (uintptr_t)ptr;
