@@ -12,6 +12,7 @@ void *GC_malloc(size_t size)
     }
 
     void *ptr = malloc(size);
+
     GC_ALLOC_INFO *info = GC_next();
     info->address = (uintptr_t)ptr;
     info->size = size;
