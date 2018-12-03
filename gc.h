@@ -3,7 +3,10 @@
 #include "gc/resize.h"
 #include "gc/expand.h"
 #include "gc/next.h"
+
 #include "gc/collect.h"
+#include "gc/stack.h"
+
 #include "gc/malloc.h"
 #include "gc/calloc.h"
 #include "gc/free.h"

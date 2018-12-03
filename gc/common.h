@@ -26,6 +26,7 @@ void GC_resize(size_t);
 void GC_collect(void);
 void GC_expand(void);
 GC_ALLOC_INFO *GC_next(void);
+void GC_set_stack_boundaries(void);
 
 void *GC_malloc(size_t);
 void *GC_calloc(size_t, size_t);
