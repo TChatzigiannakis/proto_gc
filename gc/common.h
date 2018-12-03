@@ -22,6 +22,7 @@ uintptr_t GC_heap_end = 0;
 
 void GC_init(void);
 int GC_full(void);
+void GC_resize(void);
 
 void *GC_malloc(size_t);
 void *GC_calloc(size_t, size_t);
